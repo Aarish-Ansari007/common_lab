@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions>  
+ 
+   <!-- Base Definition -->
+   <definition name="base-definition" 
+       template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+     
+       <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />  
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />  
+   </definition>  
+ 
+   <!-- Home Page -->
+   <definition name="dashboard" extends="base-definition">  
+       <put-attribute name="title" value="dashboard" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/dashboard.jsp" />  
+   </definition>  
+   
+ 
+
+   <definition name="loginlogout" 
+       template="/WEB-INF/views/tiles/layouts/loginlogoutLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="body" value="" />  
+   </definition> 
+   
+   <definition name="login" extends="loginlogout">  
+       <put-attribute name="title" value="login" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />  
+   </definition>   
+
+   <definition name="test-record-form" extends="base-definition">  
+       <put-attribute name="title" value="test-record-form" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/test-record-form.jsp" />  
+   </definition> 
+   
+    <definition name="supply-bill" extends="base-definition">  
+       <put-attribute name="title" value="bill-of-supply" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/supply-bill.jsp" />  
+   </definition> 
+   
+   <definition name="setting" extends="base-definition">  
+       <put-attribute name="title" value="update-password" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/setting.jsp" />  
+   </definition> 
+
+	<definition name="staff" extends="base-definition">  
+       <put-attribute name="title" value="staff-list" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/staff.jsp" />  
+   </definition>
+   
+   	<definition name="view-test" extends="base-definition">  
+       <put-attribute name="title" value="view-test" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/view-test.jsp" />  
+   </definition>
+   
+   <definition name="test-information" extends="base-definition">  
+       <put-attribute name="title" value="test-information" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/test-information.jsp" />  
+   </definition>
+ 
+</tiles-definitions>
